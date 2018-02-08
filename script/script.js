@@ -66,5 +66,30 @@ function mostrarImagens(seletor1, seletor2, seletor3, seletor4){
     }
 
 }
+let imagens = [
+    'img/tela1.png',
+    'img/tela2.png',
+    'img/tela3.png',
+    'img/tela4.png'
+];
 
+
+let posicao = 0;
+let img = document.querySelector ('.telaApp');
+img.src = imagens[posicao];
+
+
+
+let trocarFoto = () =>{
+    posicao ++;
+
+    if(posicao == imagens.length){
+        posicao = 0;
+    }
+
+    img.src = imagens[posicao];
+
+}
+
+setInterval(trocarFoto, 1500);
 
